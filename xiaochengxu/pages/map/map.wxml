@@ -1,5 +1,16 @@
-<map id="myMap" show-location />
-
+<view class='map-page-wrapper'>
+<view class='nav-wrapper'>
+<view wx:for="{{navArray}}" wx:key="unique" class="nav-item {{item.selected}}" data-unique='{{item.unique}}' bindtap="changeNav">
+{{item.name}}<text wx:if="{{item.number}}" class='number'>{{item.number}}</text>
+</view>
+</view>
+<view class='map-wrapper'>
+<map class="myMap" show-location />
+<cover-view class='legend'>
+  <cover-image class="img" src="../../images/legend.png" />
+</cover-view>
+</view>
+</view>
 <!-- <button type="primary" bindtap="getCenterLocation">获取位置</button>
 <button type="primary" bindtap="moveToLocation">移动位置</button>
 <button type="primary" bindtap="translateMarker">移动标注</button>

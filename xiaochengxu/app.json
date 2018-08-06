@@ -1,27 +1,45 @@
 {
-  "pages":[
+  "pages": [
+    "pages/map/map",    
     "pages/index/index",
     "pages/logs/logs",
-    "pages/map/map"
+    "pages/analysis/analysis",
+    "pages/about/about"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "color":"#ddd",
-    "selectedColor":"#456dfe",
-    "backgroundColor":"#fffffff",
-    "list":[
+  "tabBar": {
+    "color": "#ddd",
+    "selectedColor": "#456dfe",
+    "backgroundColor": "#fffffff",
+    "list": [
       {
-        "pagePath":"pages/index/index",
-        "text":"tab1"
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/k1.png",
+        "selectedIconPath": "images/k1.png"
       },
       {
         "pagePath": "pages/map/map",
-        "text": "tab2"
+        "text": "地图",
+        "iconPath": "images/k2.png",
+        "selectedIconPath": "images/k2.png"
+      },
+      {
+        "pagePath": "pages/analysis/analysis",
+        "text": "分析",
+        "iconPath": "images/k3.png",
+        "selectedIconPath": "images/k3.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/k4.png",
+        "selectedIconPath": "images/k4.png"
       }
     ]
   }

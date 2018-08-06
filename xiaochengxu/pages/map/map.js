@@ -1,5 +1,29 @@
 // map.js
 Page({
+  data:{
+    navArray: [
+      { name: 'AQI', selected: true, unique: 'unique_0' },
+      { name: 'PM', number: 2.5, selected: false, unique: 'unique_1' },
+      { name: 'PM', number: 10, selected: false, unique: 'unique_2' },
+      { name: 'SO', number: 2, selected: false, unique: 'unique_3' },
+      { name: 'NO', number: 2, selected: false, unique: 'unique_4' },
+      { name: 'O', number: 3, selected: false, unique: 'unique_5' },
+      { name: 'CO', selected: false, unique: 'unique_6' },
+    ]
+  },
+  changeNav:function(e){
+    let unique = e.currentTarget.dataset.unique;    
+    let tempArr = [];
+    this.data.navArray.forEach((item)=>{
+      if (unique === item.unique){
+        item.selected = true;
+      }else{
+        item.selected = false;
+      };
+      tempArr.push(item);
+    });
+    this.setData({navArray:tempArr});
+  },
   onReady: function (e) {
     // 使用 wx.createMapContext 获取 map 上下文
     this.mapCtx = wx.createMapContext('myMap')

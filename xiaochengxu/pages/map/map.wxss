@@ -1,5 +1,44 @@
 /* pages/map/map.wxss */
-map{
+.map-page-wrapper{
+  display: flex;
   width:100vw;
   height:100vh;
+  flex-direction: column;
+}
+.nav-wrapper{
+  display: flex;
+}
+.nav-item{
+  font-size:11pt;
+  padding:20rpx;
+  border-bottom:5rpx solid transparent;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.nav-item .number{
+  font-size: 8pt;
+}
+.nav-item.true{
+  color:rgb(57, 175, 175);
+  border-color:rgb(57, 175, 175);
+}
+.map-wrapper{
+  display: flex;
+  flex-grow: 1;
+}
+map{
+  width:100vw;
+  height:auto;
+}
+.map-wrapper .legend{
+  position: absolute;
+  top:105rpx;
+  left:25rpx;
+}
+.map-wrapper .legend .img{
+  width:160rpx;
+  height:180rpx;
+  z-index: 100;
 }
